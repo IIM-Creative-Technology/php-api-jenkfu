@@ -2,6 +2,7 @@
 
 use App\Models\Classe;
 use App\Models\Student;
+use App\Models\Subject;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -77,7 +78,7 @@ Route::get('/students', function(){
 
    // Retour de toutes les intervenants
 Route::get('/teachers', function(){
-  return Student::all();
+  return Teacher::all();
  
  });
  
@@ -99,5 +100,35 @@ Route::get('/teachers', function(){
  Route::post('/teachers', function(Request $request){
   
      return Teacher::create($request->all());
+ 
+ });
+
+
+
+
+    // Retour de toutes les matières
+Route::get('/subjects', function(){
+  return Subject::all();
+ 
+ });
+ 
+ // Retour d'un l'intervenant
+ Route::get('/subjects/{subjectId}', function($subjectId){
+     return Subject::findOrFail($subjectId);
+    });
+ 
+    // Modif de l'intervenant
+ Route::put('/subjects/{subjectId}', function($subjectId, Request $request){
+     return Subject::findOrFail($subjectId)->update($request->all());
+ });
+ // Supression de l'intervenant
+ Route::delete('/subjects/{subjectId}', function($subjectId){
+    return Subject::findOrFail($subjectId)->delete();
+ });
+ 
+ // Creation de l'intervenant
+ Route::post('/subjects', function(Request $request){
+  
+     return Subject::create($request->all());
  
  });
