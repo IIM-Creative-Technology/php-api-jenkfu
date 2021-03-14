@@ -19,8 +19,8 @@ class CreateStudentsTable extends Migration
             $table->string('first_name', 255);
             $table->integer('age');
             $table->year('year');
-           // $table->integer('class_id')->unsigned();
-           // $table->foreign('class_id')->references('id')->on('classes');
+            $table->unsignedBigInteger('class_id');
+            $table->foreign('class_id')->references('id')->on('classes');
             $table->timestamps(); 
         });
     }
@@ -32,6 +32,7 @@ class CreateStudentsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('students');
     }
 }

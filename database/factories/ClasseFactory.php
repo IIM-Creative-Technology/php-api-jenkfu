@@ -22,7 +22,7 @@ class ClasseFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence(1),
+            'name' => 'A'. $this->faker->randomNumber(1),
             'year' => $this->faker->year,
         ];
     }
