@@ -19,9 +19,8 @@ class CreateStudentsTable extends Migration
             $table->string('first_name', 255);
             $table->integer('age');
             $table->year('year');
-            // $table->foreign('class_id')->references('id')->on('classes')
-            //             ->onDelete('restrict')
-            //             ->onUpdate('restrict');
+           // $table->integer('class_id')->unsigned();
+           // $table->foreign('class_id')->references('id')->on('classes');
             $table->timestamps(); 
         });
     }

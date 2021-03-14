@@ -2,6 +2,7 @@
 
 use App\Models\Classe;
 use App\Models\Student;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -57,19 +58,19 @@ Route::get('/students', function(){
    
       // Modif de l'étudiant
    Route::put('/students/{studentId}', function($studentId, Request $request){
-      // return 'Modif étudiant n° '.$studentId;
-       return Student::findOrFail($studentId)->update($request->all());
+
+    return Student::findOrFail($studentId)->update($request->all());
    });
    // Supression de l'étudiant
    Route::delete('/students/{studentId}', function($studentId){
-       //return ' Suppression classe n° '.$studentId;
-       return Student::findOrFail($studentId)->delete();
+
+    return Student::findOrFail($studentId)->delete();
    });
    
    // Creation de la classe
    Route::post('/students', function(Request $request){
-      // return 'Nouvel étudiant';
-       return Student::create($request->all());
+
+    return Student::create($request->all());
    
    });
 
@@ -80,25 +81,23 @@ Route::get('/teachers', function(){
  
  });
  
- // Retour d'un étudiant
+ // Retour d'un l'intervenant
  Route::get('/teachers/{teacherId}', function($teacherId){
-     return Student::findOrFail($teacherId);
+     return Teacher::findOrFail($teacherId);
     });
  
-    // Modif de l'étudiant
+    // Modif de l'intervenant
  Route::put('/teachers/{teacherId}', function($teacherId, Request $request){
-     return 'Modif étudiant n° '.$teacherId;
-   //  return Student::findOrFail($studentId)->update($request->all());
+     return Teacher::findOrFail($teacherId)->update($request->all());
  });
- // Supression de l'étudiant
+ // Supression de l'intervenant
  Route::delete('/teachers/{teacherId}', function($teacherId){
-     return ' Suppression de l\'intervenant n° '.$teacherId;
- //    return Student::findOrFail($teacherId)->delete();
+    return Teacher::findOrFail($teacherId)->delete();
  });
  
- // Creation de la classe
+ // Creation de l'intervenant
  Route::post('/teachers', function(Request $request){
-     return 'Nouvel intervenant';
-    // return Student::create($request->all());
+  
+     return Teacher::create($request->all());
  
  });

@@ -26,7 +26,6 @@ class StudentFactory extends Factory
             'first_name' => $this->faker->firstName(),
             'age' => $this->faker->randomDigitNotNull(),
             'year' => $this->faker->year,
-           // 'class_id' => $this->faker->year,
         ];
     }
 }
