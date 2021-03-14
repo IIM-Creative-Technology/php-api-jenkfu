@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Classe;
 use App\Models\Student;
+use App\Models\Subject;
 use App\Models\User;
 use App\Models\Teacher;
 use Illuminate\Database\Seeder;
@@ -29,5 +30,8 @@ class DatabaseSeeder extends Seeder
 
         DB::table('teachers')->truncate(); # optionnel
         Teacher::factory(10)->create();
+
+        DB::table('subjects')->truncate(); # optionnel
+        Subject::factory(10)->create();
     }
 }
