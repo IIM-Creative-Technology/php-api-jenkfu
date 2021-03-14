@@ -54,7 +54,7 @@ You can delete in all the routes
 PUT http://127.0.0.1:8000/api/[name]/{id}
 ```
 
-Don't forget to replace {name} by one of those following elements :
+Don't forget to replace {name} by one of the following elements :
 
 * students
 * teachers
