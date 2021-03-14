@@ -29,29 +29,29 @@ $ php artisan serve
 
 You can get all the routes
 ``` bash
-GET http://127.0.0.1:8000/api/[route]
-GET http://127.0.0.1:8000/api/[route]/{id}
+GET http://127.0.0.1:8000/api/[name]
+GET http://127.0.0.1:8000/api/[name]/{id}
 ```
 
 ## POST
 
 You can insert in all the routes 
 ``` bash
-POST http://127.0.0.1:8000/api/[route]
+POST http://127.0.0.1:8000/api/[name]
 ```
 
 ## PUT
 
 You can update in all the routes 
 ``` bash
-PUT http://127.0.0.1:8000/api/[route]/{id}
+PUT http://127.0.0.1:8000/api/[name]/{id}
 ```
 
 ## DELETE
 
 You can delete in all the routes 
 ``` bash
-PUT http://127.0.0.1:8000/api/[route]/{id}
+PUT http://127.0.0.1:8000/api/[name]/{id}
 ```
 
 Don't forget to replace {name} by one of those following elements :
