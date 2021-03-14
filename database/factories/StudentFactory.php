@@ -24,7 +24,7 @@ class StudentFactory extends Factory
         return [
             'name' => $this->faker->lastName(),
             'first_name' => $this->faker->firstName(),
-            'age' => $this->faker->randomDigitNotNull(),
+            'age' => $this->faker->numberBetween(18, 30),
             'year' => $this->faker->year,
         ];
     }
