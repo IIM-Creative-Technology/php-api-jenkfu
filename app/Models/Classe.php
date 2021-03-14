@@ -13,9 +13,9 @@ class Classe extends Model
         'year',
     ];
 
-    public function classes() {
-        return $this->hasMany(Classe::class);
-    }
+    // public function classes() {
+    //     return $this->hasMany(Classe::class);
+    // }
 }
 
 

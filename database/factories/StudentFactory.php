@@ -22,11 +22,11 @@ class StudentFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence(1),
-            'first name' => $this->faker->sentence(1),
-            'age' => $this->faker->sentence(1),
+            'name' => $this->faker->lastName(),
+            'first_name' => $this->faker->firstName(),
+            'age' => $this->faker->randomDigitNotNull(),
             'year' => $this->faker->year,
-            'class_id' => $this->faker->year,
+           // 'class_id' => $this->faker->year,
         ];
     }
 }

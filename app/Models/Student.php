@@ -11,10 +11,13 @@ class Student extends Model
     
     protected $fillable = [
         'name',
+        'first_name',
+        'age',
         'year',
+        //'class_id',
     ];
 
-    public function student() {
-        return $this->belongsTo(Student::class);
-    }
+    // public function student() {
+    //     return $this->belongsTo(Student::class);
+    // }
 }

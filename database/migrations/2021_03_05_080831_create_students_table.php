@@ -15,13 +15,13 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('name',255);
-            $table->string('first name',255);
+            $table->string('name', 255);
+            $table->string('first_name', 255);
             $table->integer('age');
             $table->year('year');
-            $table->foreign('class_id')->references('id')->on('classes')
-                        ->onDelete('restrict')
-                        ->onUpdate('restrict');
+            // $table->foreign('class_id')->references('id')->on('classes')
+            //             ->onDelete('restrict')
+            //             ->onUpdate('restrict');
             $table->timestamps(); 
         });
     }
